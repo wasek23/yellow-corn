@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@900&display=swap');
+
+$primaryColor: #0285f6;
+$secondaryColor: #a5d4ee;
+
+// Common
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 62.5%;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+	font-size: 1.5rem;
+}
+
+.container{
+	max-width: 1140px;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+img{
+	width: 100%;
+	max-width: 100%;
+}
+
+.twoRow{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6rem 3.5rem;
+
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.threeRow{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 6rem 4rem;
+
+    @media screen and (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+// Button
+.mainBtn{
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 130%;
+    color: #fff;
+    background: linear-gradient(88.33deg, $secondaryColor -7.64%, $primaryColor 145.94%);
+    display: inline-block;
+    padding: 23px 43px;
+    border: none;
+    outline: 0;
+    box-shadow: 0px 2px 30px 0 rgba($secondaryColor, 0.5);
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:hover{
+        background: linear-gradient(88.33deg, $primaryColor -7.64%, $secondaryColor 145.94%);
+        box-shadow: 0px 2px 30px 0 rgba($primaryColor, 0.7);
+    }
+}
+
+// Hero Section
+#heroSection{
+    min-height: 100vh;
+    background-image: url('./img//hero-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.45);
+    background-blend-mode: overlay;
+    position: relative;
+    padding: 6rem 0;
+
+    .content{
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title{
+        font-size: 6rem;
+        color: #fff;
+        margin-bottom: 15px;
+
+        @media screen and (min-width: 576px) {
+            font-size: 6.5rem;
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 8rem;
+        }
+    }
+
+    .description{
+        font-size: 2rem;
+        font-weight: 600;
+        color: #ddd;
+    }
+}
+
+// Feature Section
+#featureSection{
+    background-color: #fff;
+    padding: 8rem 0;
+
+    .title{
+        font-size: 4rem;
+        font-weight: bold;
+        line-height: 130%;
+        color: #575757;
+        margin-bottom: 4rem;
+
+        @media screen and (min-width: 576px) {
+            font-size: 4.5rem;
+        }
+        @media screen and (min-width: 992px) {
+            font-size: 6rem;
+        }
+
+        .special{
+            color: $primaryColor;
+        }
+    }
+
+    .description{
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 160%;
+        color: #828282;
+        margin-bottom: 5rem;
+    }
+
+    .rightImage{
+        background-image: url('./img/pattern.png');
+        background-repeat: no-repeat;
+        background-position: bottom right;
+    }
+}
+
+// About Section
+#aboutSection{
+    background-image: url('./img/about-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .rightContent{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 6rem;
+    }
+
+    .title{
+        font-size: 4rem;
+        font-weight: bold;
+        color: #707070;
+        margin-bottom: 3.2rem;
+    }
+
+    .description{
+        font-size: 1.8rem;
+        font-weight: normal;
+        line-height: 170%;
+        color: #18191f;
+        margin-bottom: 4rem;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 9rem;
+        }
+    }
+
+    .mainBtn{
+        width: fit-content;
+    }
+}
+
+// Recipes
+#blogSection{
+    padding: 7rem 0;
+
+    .title{
+        font-size: 3.6rem;
+        font-weight: bold;
+        text-align: center;
+        color: #676767;
+        margin-bottom: 3rem;
+    }
+
+    .description{
+        max-width: 70rem;
+        font-size: 1.8rem;
+        text-align: center;
+        color: #252525;
+        margin: 0 auto 3.8rem auto;
+    }
+
+    .blog{
+        article{
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 3rem;
+            box-shadow: 0px 0px 40px rgba(#000, 0.15);
+            transition: all 0.3s ease;
+
+            &:hover{
+                box-shadow: 0px 0px 40px rgba(#000, 0.3);
+            }
+
+            img{
+                display: inline-block;
+                margin-bottom: 4rem;
+                border-radius: inherit;
+            }
+
+            h3{
+                font-size: 2.8rem;
+                font-weight: 800;
+                color: #18191f;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                font-size: 1.8rem;
+                line-height: 170%;
+                color: #18191f;
+            }
+        }
+    }
+}
+
+// Counter Section
+#counterSection{
+    padding: 7rem 0;
+
+    .counters{
+        grid-gap: 5rem 3rem;
+        justify-items: center;
+        padding: 5rem;
+        border-radius: 20px;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+
+        h3{
+            font-size: 4.8rem;
+            font-weight: 700;
+            color: #18191f;
+            margin-bottom: .8rem;
+        }
+
+        p{
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// Footer
+footer{
+    background-color: #0b0d17;
+    padding: 4rem 0 11rem 0;
+
+    .title{
+        font-family: 'Roboto', sans-serif;
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+        text-transform: uppercase;
+        color: #5b5b5b;
+        margin-bottom: 3.5rem;
+
+        .special{
+            color: transparent;;
+            background: linear-gradient(to right, $secondaryColor, $primaryColor);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+    }
+
+    .description{
+        font-size: 1.6rem;
+        text-align: center;
+        color: #fff;
+    }
+}
